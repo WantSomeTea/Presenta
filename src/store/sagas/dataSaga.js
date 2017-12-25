@@ -1,5 +1,5 @@
 import { call, put, takeLatest, select, take } from 'redux-saga/effects';
-import { DATA_REQESTING } from '../constants/actionTypes';
+import { DATA_REQUESTING } from '../constants/actionTypes';
 import { dataRequestSuccess, dataRequestError } from '../actions/dataActions';
 import api from '../../api/dataApi';
 
@@ -14,7 +14,7 @@ function* datarequestFlow(action) {
 }
 
 function* watcher() {
-    yield [takeLatest(DATA_REQESTING, datarequestFlow)];
+    yield [takeLatest(DATA_REQUESTING, datarequestFlow)];
 }
 
 export default watcher;

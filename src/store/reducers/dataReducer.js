@@ -5,7 +5,7 @@ import {
     DATA_REQUEST_ERROR
 } from '../constants/actionTypes';
 
-export default function(state = initialState.poll, action) {
+export default function(state = initialState.data, action) {
     switch (action.type) {
         case DATA_REQUESTING:
             return {
